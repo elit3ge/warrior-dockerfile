@@ -1,0 +1,16 @@
+    kind: pipeline
+    type: docker
+    name: build-and-push
+
+    steps:
+      - name: build-image
+        image: plugins/docker
+        settings:
+          repo: elit3ge/warrior-dockerfile
+          tags:
+            - latest
+          username:
+            from_secret: docker_username
+          password:
+            from_secret: docker_password
+          dockerfile: Dockerfile # Path to your Dockerfile
