@@ -1,4 +1,4 @@
-FROM atdr.meo.ws/archiveteam/grab-base
+FROM elit3ge/docker-baseimage-alpine
 
 LABEL version="20250829.01"
 
